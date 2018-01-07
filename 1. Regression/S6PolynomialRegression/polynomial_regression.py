@@ -21,7 +21,7 @@ reg_lin.fit(X, y)
 
 # fitting polynomial regressions to the dataset
 from sklearn.preprocessing import PolynomialFeatures
-reg_poly = PolynomialFeatures(degree=2)
+reg_poly = PolynomialFeatures(degree= 4)
 X_poly = reg_poly.fit_transform(X)
 reg_lin2 = LinearRegression()
 reg_lin2.fit(X_poly, y)
@@ -35,8 +35,10 @@ plt.ylabel('Salary')
 plt.show()
 
 # visualising the polynomial regression results
+X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = X_grid.reshape((len(X_grid), 1))
 plt.scatter(X, y, color='red')
-plt.plot(X, reg_lin2.predict(reg_poly.fit_transform(X)), color = 'blue')
+plt.plot(X_grid, reg_lin2.predict(reg_poly.fit_transform(X_grid)), color = 'blue')
 plt.title('True Salary or Fabricated Salary [PolynomialRegression]')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
