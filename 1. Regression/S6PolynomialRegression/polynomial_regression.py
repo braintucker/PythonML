@@ -29,6 +29,9 @@ reg_lin2.fit(X_poly, y)
 # visualising the linear regression results
 plt.scatter(X, y, color='red')
 plt.plot(X, reg_lin.predict(X), color = 'blue')
-
+plt.title('True Salary or Fabricated Salary [LinearRegression]')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
 
 # visualising the polynomial regression results
