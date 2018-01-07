@@ -25,3 +25,10 @@ reg_poly = PolynomialFeatures(degree=2)
 X_poly = reg_poly.fit_transform(X)
 reg_lin2 = LinearRegression()
 reg_lin2.fit(X_poly, y)
+
+# visualising the linear regression results
+plt.scatter(X, y, color='red')
+plt.plot(X, reg_lin.predict(X), color = 'blue')
+
+
+# visualising the polynomial regression results
