@@ -35,3 +35,9 @@ plt.ylabel('Salary')
 plt.show()
 
 # visualising the polynomial regression results
+plt.scatter(X, y, color='red')
+plt.plot(X, reg_lin2.predict(reg_poly.fit_transform(X)), color = 'blue')
+plt.title('True Salary or Fabricated Salary [PolynomialRegression]')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
