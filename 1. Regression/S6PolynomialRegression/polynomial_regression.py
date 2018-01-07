@@ -23,3 +23,5 @@ reg_lin.fit(X, y)
 from sklearn.preprocessing import PolynomialFeatures
 reg_poly = PolynomialFeatures(degree=2)
 X_poly = reg_poly.fit_transform(X)
+reg_lin2 = LinearRegression()
+reg_lin2.fit(X_poly, y)
