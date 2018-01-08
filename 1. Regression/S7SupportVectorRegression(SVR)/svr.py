@@ -30,7 +30,7 @@ regressor.fit(X, y)
 
 
 # Predicting a new result
-y_pred = regressor.predict(6.5)
+y_pred = regressor.predict(sc_X.transform(np.array([[6.5]])))
 
 # Visualising the SVR results
 plt.scatter(X, y, color = 'red')
