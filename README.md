@@ -4,7 +4,7 @@ Machine Learning models created using Python. Creating these in order to study m
 ## Brian Tucker
 1/1/2018
 
-### Covering and building these models:
+### Covering and building these topics:
 ##### Scratched out if it has been completed
 1. ~~Regression~~
 2. Classification
