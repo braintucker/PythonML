@@ -19,3 +19,15 @@ rules = ap(transactions, min_support = 0.003, min_confidence = 0.2, min_lift = 3
 # visualising the results
 results = list(rules)
 
+# This function takes as argument your results list and return a tuple list with the format:
+# [(rh, lh, support, confidence, lift)] 
+def inspect(results):
+    rh          = [tuple(result[2][0][0]) for result in results]
+    lh          = [tuple(result[2][0][1]) for result in results]
+    supports    = [result[1] for result in results]
+    confidences = [result[2][0][2] for result in results]
+    lifts       = [result[2][0][3] for result in results]
+    return list(zip(rh, lh, supports, confidences, lifts))
+ 
+# this command creates a data frame to view
+resultDataFrame=pd.DataFrame(inspect(results))
