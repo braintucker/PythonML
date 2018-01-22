@@ -13,4 +13,9 @@ for i in range(0, 7501):
 
 # training the apriori on the dataset
 from apyori import apriori as ap
-rules = ap(transactions, min_support = 0.003, min_confidence = 0.2, min_lift = , min_length = 2)
+rules = ap(transactions, min_support = 0.003, min_confidence = 0.2, min_lift = 3, min_length = 2)
+
+
+# visualising the results
+results = list(rules)
+
